@@ -1,0 +1,24 @@
+# Environment variables & secrets
+.env
+backend/.env
+*.env
+
+# Python caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Local databases & virtual environments
+.venv/
+venv/
+*.db
+sentinel.db
+backend/data/*.db
+
+# Generated data & binary cache directories
+backend/data/satellite_cache/
+backend/data/photos/
+backend/data/uploads/
+
+

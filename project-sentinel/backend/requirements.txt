@@ -1,0 +1,30 @@
+# Tested on Python 3.11 (Windows). Install: pip install -r requirements.txt
+# Web / API
+fastapi==0.141.1
+uvicorn[standard]==0.53.0
+pydantic==2.13.5
+python-multipart==0.0.32     # UploadFile/Form in routers/photos.py, routers/pipeline.py
+
+# Database (async SQLite by default; see DATABASE_URL in app/config.py)
+sqlalchemy==2.0.54
+aiosqlite==0.22.1
+
+# Data / classical ML
+numpy==2.4.6
+pandas==3.0.6
+scikit-learn==1.9.1
+xgboost==3.2.0               # optional at runtime: falls back to sklearn HistGradientBoosting
+shap==0.51.0                 # optional at runtime: SHAP explanations for the risk model
+
+# Computer vision (YOLOv8 photo verification)
+ultralytics==8.4.160
+pillow==12.3.0
+
+# Satellite imagery (Copernicus Data Space / Sentinel Hub)
+sentinelhub==3.12.0
+
+# PAIMANA flash-report PDF ingestion
+pdfplumber==0.11.10
+
+# Optional background satellite cache refresh (ENABLE_SATELLITE_SCHEDULER=true)
+apscheduler==3.11.3
